@@ -45,20 +45,20 @@ get_header();
             <div class="Cards" id="Blogger-Cards">
                 <div id="Blogger-Card">
                     <div class="Head-PNG">
-                        <img src="https://p.lfio.net/i/?i=30751423">
+                        <img src="<?php if (get_option('PureWin-BloggerHead') == ""){echo "https://p.lfio.net/i/?i=30751423";}else{echo get_option('PureWin-BloggerHead');}?>">
                     </div>
                     <div class="Head-Info">
-                        <a id="Blogger-Des">从现在开始我所展望的未来在哪里</a>
-                        <div id="Blogger-Name">LF112</div>
+                        <a id="Blogger-Des"><?php if (get_option('PureWin-BloggerToSay') == ""){echo "如果现在不开始想，那以后哪有时间做";}else{echo get_option('PureWin-BloggerToSay');}?></a>
+                        <div id="Blogger-Name"><?php if (get_option('PureWin-BloggerName') == ""){echo "PureWin";}else{echo get_option('PureWin-BloggerName');}?></div>
                     </div>
                     <div class="Tags-Box">
                         <div id="Tags">
-                            <i class="fa fa-paper-plane"></i>
-                            <a>没技术</a>
+                            <i class="<?php if (get_option('PureWin-BloggerTags1-icon') == ""){echo "fa fa-paper-plane";}{echo get_option('PureWin-BloggerTags1-icon');} ?>"></i>
+                            <a><?php if (get_option('PureWin-BloggerTags1') == ""){echo "肥宅快乐";}{echo get_option('PureWin-BloggerTags1');} ?></a>
                         </div>
                         <div id="Tags">
-                            <i class="fa fa-paper-plane"></i>
-                            <a>没技术</a>
+                            <i class="<?php if (get_option('PureWin-BloggerTags2-icon') == ""){echo "fa fa-fish";}{echo get_option('PureWin-BloggerTags2-icon');} ?>"></i>
+                            <a><?php if (get_option('PureWin-BloggerTags2') == ""){echo "咸鱼干";}{echo get_option('PureWin-BloggerTags2');} ?></a>
                         </div>
                     </div>
                     <div class="Contact-Me">

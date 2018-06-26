@@ -48,6 +48,24 @@ function PureWin_Setting(){ ?>
 
             echo '<script>alert("已保存状态栏调整");</script>';
         }
+        if ($_POST['PureWin_form_SetUp-BloggerInfo']=='保存'){
+            PureWin_up_or_del('PureWin-BloggerHead');
+            //保存头像
+            PureWin_up_or_del('PureWin-BloggerName');
+            //保存博主名字
+            PureWin_up_or_del('PureWin-BloggerToSay');
+            //保存博主个性签名
+            PureWin_up_or_del('PureWin-BloggerTags1');
+            //保存个性签名1
+            PureWin_up_or_del('PureWin-BloggerTags1-icon');
+            //保存个性签名1的图标
+            PureWin_up_or_del('PureWin-BloggerTags2');
+            //保存个性签名2
+            PureWin_up_or_del('PureWin-BloggerTags2-icon');
+            //保存个性签名2的图标
+
+            echo '<script>alert("已保存博主信息");</script>';
+        }
     ?>
     <!--Main-->
     <main>
@@ -67,6 +85,19 @@ function PureWin_Setting(){ ?>
                         <div class="Cards-Text">
                             <span id="Cards-Title">系统</span>
                             <span id="Cards-Subtitle">样式设置</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li goto="#Basic_Settings">
+                <a href="javascript:;">
+                    <div id="Mods-Cards">
+                        <div class="Cards-icon">
+                            <i class="fa fa-cog"></i>
+                        </div>
+                        <div class="Cards-Text">
+                            <span id="Cards-Title">设置</span>
+                            <span id="Cards-Subtitle">基础设置</span>
                         </div>
                     </div>
                 </a>
@@ -159,6 +190,88 @@ function PureWin_Setting(){ ?>
 
         </section>
         <!--样式设置-->
+
+        <!--基础设置-->
+        <section id="Basic_Settings">
+
+            <div class="Face-Page">
+                <div id="Side-Bar">
+                    <div class="Side-Bar-Top">
+                        <div id="Back-Box" class="Do-Home">
+                            <i class="fas fa-chevron-left"></i>
+                        </div>
+                        <span>基础设置</span>
+                    </div>
+                </div>
+                <div class="Back-Bottom Do-Home">
+                    <div id="Back-Box">
+                        <i class="fa fa-home"></i>
+                    </div>
+                    <span>首页</span>
+                </div>
+                <div class="PureWin-Title">
+                    <span>感谢您使用 PureWin V<?php echo wp_get_theme()->get('Version'); ?></span>
+                </div>
+                <div class="Face-Menu">
+                    <span>基础</span>
+                    <ul>
+                        <li goto="#PureWin-BloggerInfo">
+                            <div id="Icon-Box">
+                                <i class="fa fa-address-card"></i>
+                            </div>
+                            <span>博主信息</span>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="Face-Menu-Main">
+                <!--博主信息更换-->
+                <section id="PureWin-BloggerInfo" class="active">
+                    <div class="BloggerInfo-Box">
+                        <img src="<?php if (get_option('PureWin-BloggerHead') == ""){echo "https://p.lfio.net/i/?i=30751423";}{echo get_option('PureWin-BloggerHead');}?>">
+                    </div>
+                    <form action="" method="post" id="PureWin_form_SetUp-BloggerInfo">
+                        <div>
+                            <span>博主头像 :  </span>
+                            <input type="text" name="PureWin-BloggerHead" value="<?php if (get_option('PureWin-BloggerHead') == ""){echo "https://p.lfio.net/i/?i=30751423";}{echo get_option('PureWin-BloggerHead');} ?>">
+                        </div>
+                        <div>
+                            <span>博主名称 :  </span>
+                            <input type="text" name="PureWin-BloggerName" value="<?php if (get_option('PureWin-BloggerName') == ""){echo "PureWin";}{echo get_option('PureWin-BloggerName');} ?>">
+                        </div>
+                        <div>
+                            <span>个性签名 :  </span>
+                            <input type="text" name="PureWin-BloggerToSay" value="<?php if (get_option('PureWin-BloggerToSay') == ""){echo "如果现在不开始想，那以后哪有时间做";}{echo get_option('PureWin-BloggerToSay');} ?>">
+                        </div>
+                        <div>
+                            <span>个性标签 : </span>
+                            <input type="text" name="PureWin-BloggerTags1" value="<?php if (get_option('PureWin-BloggerTags1') == ""){echo "肥宅快乐";}{echo get_option('PureWin-BloggerTags1');} ?>">
+                        </div>
+                        <div>
+                            <span>小图标<i class="<?php if (get_option('PureWin-BloggerTags1-icon') == ""){echo "fa fa-paper-plane";}{echo get_option('PureWin-BloggerTags1-icon');} ?>"></i> : </span>
+                            <input type="text" name="PureWin-BloggerTags1-icon" value="<?php if (get_option('PureWin-BloggerTags1-icon') == ""){echo "fa fa-paper-plane";}{echo get_option('PureWin-BloggerTags1-icon');} ?>">
+                        </div>
+                        <div>
+                        <span>个性标签 : </span>
+                        <input type="text" name="PureWin-BloggerTags2" value="<?php if (get_option('PureWin-BloggerTags2') == ""){echo "咸鱼干";}{echo get_option('PureWin-BloggerTags2');} ?>">
+                        </div>
+                        <div>
+                            <span>小图标<i class="<?php if (get_option('PureWin-BloggerTags2-icon') == ""){echo "fa fa-fish";}{echo get_option('PureWin-BloggerTags2-icon');} ?>"></i> : </span>
+                            <input type="text" name="PureWin-BloggerTags2-icon" value="<?php if (get_option('PureWin-BloggerTags2-icon') == ""){echo "fa fa-fish";}{echo get_option('PureWin-BloggerTags2-icon');} ?>">
+                        </div>
+                        <div>
+                            <input type="submit" class="button-primary SetUp-Buttom" name="PureWin_form_SetUp-BloggerInfo" value="保存">
+                        </div>
+                    </form>
+                </section>
+                <!--博主信息更换-->
+
+            </div>
+
+        </section>
+        <!--基础设置-->
+
     </div>
 
         <script>
