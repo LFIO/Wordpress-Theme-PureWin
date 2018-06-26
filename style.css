@@ -131,6 +131,8 @@ Main #Desktop{
         right: 0;
         margin: 22px auto;
         box-shadow: 0 0 0 1px rgba(216, 219, 220, 0.5), 0 1px 2px #c9c9ca;
+        user-select: none;
+        -webkit-user-select: none;
     }
 
     #Desktop #Blogger-Card .Head-Info{
@@ -141,12 +143,16 @@ Main #Desktop{
     #Desktop #Blogger-Card .Head-Info #Blogger-Des{
         color: #b3b5b9;
         font-size: 14px;
+        user-select: none;
+        -webkit-user-select: none;
     }
 
     #Desktop #Blogger-Card .Head-Info #Blogger-Name{
         color: #fff;
         font-size: 20px;
         line-height: 32px;
+        user-select: none;
+        -webkit-user-select: none;
     }
 
     #Desktop #Blogger-Card .Tags-Box{
@@ -180,6 +186,8 @@ Main #Desktop{
     #Desktop #Blogger-Card .Tags-Box a{
         color: #b9bbbe;
         font-size: 14px;
+        user-select: none;
+        -webkit-user-select: none;
     }
 
     #Desktop #Blogger-Card .Contact-Me{
