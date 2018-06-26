@@ -36,7 +36,7 @@
     <meta name="description" content="BY LF112">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
-    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/style.css?ver=<?php echo wp_get_theme()->get('Version');?>" type="text/css" media="screen" />
+    <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css?ver=<?php echo wp_get_theme()->get('Version');?>" type="text/css" media="screen" />
 
     <style>
         <?php
