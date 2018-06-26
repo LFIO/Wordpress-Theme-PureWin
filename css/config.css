@@ -1,0 +1,292 @@
+/*
+ *  _     _____ _ _ ____               _
+ * | |   |  ___/ / |___ \   _ __   ___| |_
+ * | |   | |_  | | | __) | | '_ \ / _ \ __|
+ * | |___|  _| | | |/ __/ _| | | |  __/ |_
+ * |_____|_|   |_|_|_____(_)_| |_|\___|\__|
+ * Theme Name: PureWin
+ * Theme URI: https://lf112.net
+ * Description: Theme PureWin by LF112
+ * Version: 0.0.3
+ * Author: LF112
+ * Author URI: https://lf112.net
+ * Tags: PureWin,Windows10,LF112,Wordpress,Metro
+ */
+@import url("https://use.fontawesome.com/releases/v5.1.0/css/all.css");
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,700");
+
+main{
+    font-weight:400;
+    font-family:Titillium Web;
+}
+
+main .Main-Title{
+    width: 100%;
+    text-align: center;
+    margin: 62px 0 auto;
+}
+
+main .Main-Title span{
+    font-size: 32px;
+}
+
+main .Main-Subtitle{
+    width: 100%;
+    text-align: center;
+    margin: 57px 0 auto;
+}
+
+main .Main-Subtitle span{
+    font-size: 14px;
+}
+
+main .Main-Box{
+    height: 407px;
+    margin: 55px 60px auto 60px;
+}
+
+main .Main-Box li{
+    list-style: none;
+    width: 245px;
+    height: 85px;
+}
+
+main .Main-Box li a{
+    text-decoration: none;
+}
+
+main .Main-Box li #Mods-Cards{
+    width: 245px;
+    height: 85px;
+}
+
+main .Main-Box li #Mods-Cards:hover{
+    border: 2.3px solid #e2e2e2;
+}
+
+main .Main-Box li #Mods-Cards .Cards-icon{
+    width: 28px;
+    height: 22px;
+}
+
+main .Main-Box li #Mods-Cards .Cards-icon i{
+    font-size: 22px;
+    margin: 17px 0 auto 15px;
+    color: #6ECDF0;
+}
+
+main .Main-Box li .Cards-Text{
+    margin: -7px 0 auto 64px;
+}
+
+main .Main-Box li .Cards-Text #Cards-Title{
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+    color: #444;
+}
+
+main .Main-Box li .Cards-Text #Cards-Subtitle{
+    display: flex;
+    align-items: center;
+    margin: 1px 0 auto;
+    text-decoration: none;
+    color: #444;
+}
+
+.Face-Page{
+    width: 321px;
+    background-color: #E6E6E6;
+    font-weight:400;
+    font-family:Titillium Web;
+    display: unset;
+}
+
+.Face-Page #Side-Bar{
+    margin-right: 18px;
+}
+
+.Face-Page #Side-Bar .Side-Bar-Top {
+    width: 100%;
+    height: 33px;
+    background-color: #E6E6E6;
+}
+
+.Face-Page #Side-Bar .Side-Bar-Top #Back-Box{
+    width: 50px;
+    height: 33px;
+    text-align: center;
+    display: inline-block;
+}
+
+.Face-Page #Side-Bar .Side-Bar-Top #Back-Box:hover{
+    background-color: #66CAEE;
+}
+
+.Face-Page #Side-Bar .Side-Bar-Top #Back-Box i{
+    font-size: 17px;
+    margin: 8px 0 auto;
+}
+
+
+.Face-Page #Side-Bar .Side-Bar-Top #Back-Box:hover i{
+    color: #fff;
+}
+
+.Face-Page #Side-Bar .Side-Bar-Top span{
+    margin: 0 0 0 11px;
+    display: inline-block;
+}
+
+.Face-Page .Back-Bottom {
+    height: 48px;
+    width: 321px;
+    margin: 35px 0 auto;
+}
+
+.Face-Page .Back-Bottom:hover{
+    background-color: #D6D6D6;
+}
+
+.Face-Page .Back-Bottom #Back-Box {
+    width: 50px;
+    height: 48px;
+    text-align: center;
+    display: inline-block;
+}
+
+.Face-Page .Back-Bottom #Back-Box i{
+    font-size: 17px;
+    margin: 16px 0 auto;
+}
+
+.Face-Page .Back-Bottom span{
+    font-size: 16px;
+}
+
+.Face-Page .PureWin-Title{
+    height: 35px;
+    text-align: center;
+}
+
+.Face-Page .PureWin-Title span{
+    font-size: 18px;
+    color: #a7a7a7;
+}
+
+.Face-Page .Face-Menu{
+    width: 100%;
+}
+
+.Face-Page .Face-Menu span {
+    font-size: 16px;
+    margin: 10px;
+}
+
+.Face-Page .Face-Menu ul{
+    width: 100%;
+}
+
+.Face-Page .Face-Menu ul li{
+    width: 175px;
+    height: 40px;
+    display: inline-block;
+}
+
+.Face-Page .Face-Menu ul li:hover{
+    background-color: #D6D6D6;
+}
+
+.Face-Page .Face-Menu ul li #Icon-Box{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    display: inline-block
+}
+
+.Face-Page .Face-Menu ul li #Icon-Box i{
+    font-size: 17px;
+    margin: 11px 0 auto;
+}
+
+.Face-Page .Face-Menu ul li span{
+    margin: 0 0 0 -3px;
+    display: inline-block;
+    font-size: 12px;
+}
+
+.Face-Menu-Main{
+    width: 100%;
+}
+
+.Face-Menu-Main .active {
+    display: block;
+}
+
+.Face-Menu-Main section{
+    display: none;
+}
+
+.Face-Menu-Main #PureWin-BackGround{
+
+}
+
+.Face-Menu-Main #PureWin-BackGround .BackGround-PNG{
+    width: 100%;
+    height: 245px;
+    text-align: center;
+    border-top: 1px solid #c5c5c5;
+}
+
+.Face-Menu-Main #PureWin-BackGround .BackGround-PNG img{
+    width: 350px;
+    height: 230px;
+    border-radius: 6px;
+    margin: 15px 0 auto;
+    box-shadow: 0 0 2px 0 rgba(49, 49, 49, 0.85);
+}
+
+.Face-Menu-Main #PureWin-BackGround .SetUp-Box{
+    width: 100%;
+    text-align: center;
+    margin: 35px 0 auto;
+}
+
+.Face-Menu-Main #PureWin-BackGround .SetUp-Box form{
+    width: 100%;
+}
+
+.Face-Menu-Main #PureWin-BackGround .SetUp-Box form input{
+    width: 21.5em;
+}
+
+.Face-Menu-Main #PureWin-BackGround .SetUp-Box .SetUp-Buttom{
+    width: 75px;
+}
+
+.Face-Menu-Main #PureWin-StatusBar .StatusBar-Box{
+    width: 100%;
+    height: 245px;
+    text-align: center;
+    border-top: 1px solid #c5c5c5;
+}
+
+.Face-Menu-Main #PureWin-StatusBar .StatusBar-Box form div{
+
+}
+
+.Hide{
+    display: none;
+}
+
+.Do-Card{
+
+}
+
+.Do-Card section{
+    display: none;
+}
+
+.Do-Card .active {
+    display: block;
+}

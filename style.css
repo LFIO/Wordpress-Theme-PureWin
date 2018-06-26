@@ -1,0 +1,307 @@
+/*
+ *  _     _____ _ _ ____               _
+ * | |   |  ___/ / |___ \   _ __   ___| |_
+ * | |   | |_  | | | __) | | '_ \ / _ \ __|
+ * | |___|  _| | | |/ __/ _| | | |  __/ |_
+ * |_____|_|   |_|_|_____(_)_| |_|\___|\__|
+ * Theme Name: PureWin
+ * Theme URI: https://lf112.net
+ * Description: Theme PureWin by LF112
+ * Version: 0.0.3
+ * Author: LF112
+ * Author URI: https://lf112.net
+ * Tags: PureWin,Windows10,LF112,Wordpress,Metro
+ */
+@import url("https://use.fontawesome.com/releases/v5.1.0/css/all.css");
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,700");
+
+body {
+    /*background-color: #F2F2F2;*/
+    background-image: url(/wp-content/themes/PureWin/images/background.png);
+    height: 100%;
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+    font-weight:400;
+    font-family:Titillium Web;
+}
+
+/*-----Desktop-----*/
+
+Main #Desktop{
+    position: fixed;
+}
+
+#Desktop ul {
+    -webkit-padding-start: 0px;
+    -webkit-margin-before: 0em;
+    list-style:none;
+    margin: 0 0 auto 6px;
+    padding: 0;
+    position: fixed;
+}
+
+#Desktop ul li{
+    width: 48px;
+    height: 49px;
+    margin: 28px auto 0;
+    list-style:none
+}
+
+#Desktop ul .Top-li{
+    margin: 13px auto 0;
+}
+
+#Desktop .Main-Card{
+    width: 73px;
+    height: 55px;
+    position:relative;
+}
+
+#Desktop .Main-Card:hover {
+    background-color: rgba(242, 242, 242, 0.35);
+    box-shadow: 0 0px 1px 0 rgba(255, 255, 255, 0.88);
+}
+
+#Desktop .Main-Card #logo{
+    width: 100%;
+    height: 28px;
+}
+
+#Desktop .Main-Card #logo img{
+    width: 31px;
+    height: 31px;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0px auto;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#Desktop .Main-Card #Title{
+
+}
+
+#Desktop .Main-Card #Title a{
+    margin: 6px auto 0;
+    color: #fff;
+    font-size: 9px;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+/*-----Desktop Small Parts-----*/
+
+    .Cards {
+        position: fixed;
+        top: 40px;
+        right: 50px;
+        width: 270px;
+        height: 352px;
+        border-radius: 1px;
+        background-color: rgba(53, 53, 53, 0.42);
+        box-shadow: 0 0 2px 0 rgba(49, 49, 49, 0.85)
+    }
+
+    #Desktop #Blogger-Cards{
+        top: 0;
+        right: 0;
+        height: 95.5%;
+    }
+
+    #Desktop #Blogger-Card{
+        margin: 45px 0 auto;
+    }
+
+    #Desktop #Blogger-Card .Head-PNG{
+        width: 100%;
+        height: 125px;
+    }
+
+    #Desktop #Blogger-Card .Head-PNG img{
+        width: 85px;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 22px auto;
+        box-shadow: 0 0 0 1px rgba(216, 219, 220, 0.5), 0 1px 2px #c9c9ca;
+    }
+
+    #Desktop #Blogger-Card .Head-Info{
+        width: 100%;
+        text-align: center;
+    }
+
+    #Desktop #Blogger-Card .Head-Info #Blogger-Des{
+        color: #b3b5b9;
+        font-size: 14px;
+    }
+
+    #Desktop #Blogger-Card .Head-Info #Blogger-Name{
+        color: #fff;
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    #Desktop #Blogger-Card .Tags-Box{
+        width: 230px;
+        margin: 5px 0 auto 20px;
+        -ms-flex-pack: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    #Desktop #Blogger-Card .Tags-Box #Tags{
+        background-color: rgba(22, 23, 25, 0.3);
+        align-items: center;
+        border-radius: 4px;
+        display: -webkit-box;
+        padding: 3px 14px 4px;
+        width: max-content;
+        float: left;
+        margin-right: 4px;
+        margin-left: 4px;
+    }
+
+    #Desktop #Blogger-Card .Tags-Box i{
+        color: #b9bbbe;
+        font-size: 14px;
+    }
+
+    #Desktop #Blogger-Card .Tags-Box a{
+        color: #b9bbbe;
+        font-size: 14px;
+    }
+
+    #Desktop #Blogger-Card .Contact-Me{
+        width: 270px;
+    }
+
+    #Desktop #Blogger-Card .Contact-Me #Split-Main{
+        width: 230px;
+        margin: 12px 0 auto 20px;
+    }
+
+    #Desktop #Blogger-Card .Contact-Me .Split{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.26);
+    }
+
+    #Desktop #Blogger-Card .Contact-Me #Split-Main span{
+
+    }
+
+/*-----Desktop Small Parts-----*/
+
+/*-----Desktop-----*/
+
+/*-----Taskbar-----*/
+
+#Taskbar-footer{
+    bottom: 0px;
+    width: 100%;
+    height: 44px;
+    position: fixed;
+    background-color: #0B0B0B;
+}
+
+#Taskbar-footer .Start{
+    width: 48px;
+}
+
+#Taskbar-footer .Start img{
+    width: 16px;
+    height: 16px;
+    color: #fff;
+    position: fixed;
+    left: 2px;
+    margin: 13px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#Taskbar-footer .Search{
+    width: 344px;
+    height: 100%;
+    left: 48px;
+    position: fixed;
+    background-color: #333333;
+}
+
+#Taskbar-footer .Search i{
+    color: #fff;
+    margin: 13px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#Taskbar-footer .Search #left{
+    position: fixed;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#Taskbar-footer .Search input{
+    border: none;
+    box-shadow: none;
+    background: rgba(225, 225, 225, 0);
+    color: #fff;
+    width: 261px;
+    height: 35px;
+    font-size: 15px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#Taskbar-footer .Menu{
+    left: 392px;
+    position: fixed;
+}
+
+#Taskbar-footer .Menu i{
+    color: #fff;
+    margin: 13px 13px 13px 16px;
+}
+
+#Taskbar-footer .I {
+    right: 17px;
+    position: fixed;
+}
+
+#Taskbar-footer .I img{
+    width: 30px;
+    border-radius: 3px;
+    margin: 6px auto;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#Taskbar-footer .Time{
+    right: 60px;
+    text-align: center;
+    position: fixed;
+    font-size: 12px;
+    margin: 3px auto;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#Taskbar-footer .Time span{
+    color: #fff;
+}
+
+/*-----Taskbar-----*/
+
+#Move_div{
+    background-color: rgba(162, 204, 242, 0.35);
+    box-shadow: 0 0px 0.1px 0 rgba(255, 255, 255, 0.88);
+    position: fixed;
+}
