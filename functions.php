@@ -27,3 +27,12 @@ function remove_admin_login_header() {
 if ( !is_admin() ) {
     add_filter('show_admin_bar', '__return_false');
 }
+
+//WP漏洞补血包
+add_filter( 'wp_update_attachment_metadata', 'rips_unlink_tempfix' );
+function rips_unlink_tempfix( $data ) {
+    if( isset($data['thumb']) ) {
+        $data['thumb'] = basename($data['thumb']);
+    }
+    return $data;
+}

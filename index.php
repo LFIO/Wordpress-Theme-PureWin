@@ -80,7 +80,7 @@ get_header();
                 <i class="fas fa-greater-than" id="left"></i>
             </div>
             <div class="Menu">
-                <i class="far fa-window-restore"></i>
+                <a target="_blank" href="/wp-admin"><i class="far fa-window-restore"></i></a>
             </div>
             <div class="I">
                 <img src="https://p.lfio.net/i/?i=30751423">
