@@ -36,3 +36,35 @@ function rips_unlink_tempfix( $data ) {
     }
     return $data;
 }
+
+
+// 文章浏览量
+function restyle_text($number) {
+    if($number >= 1000) {
+        return round($number/1000,2) . 'k';
+    }else{
+        return $number;
+    }
+}
+function getPostViews($postID) {
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if ($count == '') {
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+        return "0";
+    }
+    return restyle_text($count);
+}
+function setPostViews($postID) {
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if ($count == '') {
+        $count = 0;
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+    } else {
+        $count++;
+        update_post_meta($postID, $count_key, $count);
+    }
+}

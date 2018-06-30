@@ -15,6 +15,8 @@
 
 window.onload=function(){
     refreshTime();
+    console.clear();
+    console.log("\n %c LF112 %c https://LF112.NET %c 页面加载完毕消耗了%c " + Math.round(100 * performance.now()) / 100 + "ms \n\n", "color: #ffffff; background: #f0dda3; padding:5px 0;", "background: #f1f1e1; padding:5px 0;", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;", "color: #eedda3; background: rgba(49, 49, 49, 0.85); padding:5px 0;")
 }
 function checkTime(i){
     if(i<10){
