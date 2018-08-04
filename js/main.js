@@ -51,7 +51,7 @@ function refreshTime(){
             var endTop,endLeft;
             var selectBox=$('<div id="select-box"></div>');
             $('body').append(selectBox);
-            selectBox.css({'position':'fixed', 'top':startTop+'px', 'left':startLeft+'px', 'background':'rgba(162, 204, 242, 0.35)', 'transition':'all 0s', 'width':0, 'height':0, 'z-index':10,'box-shadow':'0 0px 0.1px 0 rgba(255, 255, 255, 0.88)'})
+            selectBox.css({'position':'absolute', 'top':startTop+'px', 'left':startLeft+'px', 'background':'rgba(162, 204, 242, 0.35)', 'transition':'all 0s', 'width':0, 'height':0, 'z-index':10,'box-shadow':'0 0px 0.1px 0 rgba(255, 255, 255, 0.88)'})
             $(document).on('mousemove',function (e) {
                 e.preventDefault();
                 endTop=e.pageY;
@@ -104,13 +104,3 @@ $(function () {
     $('body').areaSelect()
 })
 //模仿Win10桌面拖拉框
-
-$("#SSR").hover(function(){},function(){
-    if(document.all){
-    }else{
-        document.onmousedown= function(){return false;};
-        document.onmouseup= function(){return true;};
-    }
-    document.onselectstart = new Function('event.returnValue=false;');
-});
-//针对IE浏览器选中控件->针对编辑框

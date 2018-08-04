@@ -13,7 +13,6 @@
  * Tags: PureWin,Windows10,LF112,Wordpress,Metro
  */
 @import url("https://use.fontawesome.com/releases/v5.1.0/css/all.css");
-@import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,700");
 
 html, body, * {
     margin: 0;
@@ -30,7 +29,7 @@ html, body, * {
 }
 
 
-body {
+body, html {
     /*background-color: #F2F2F2;*/
     background-image: url(/wp-content/themes/PureWin/images/background.png);
     height: 100%;
@@ -38,13 +37,17 @@ body {
     min-height: 100vh;
     margin: 0;
     font-weight:400;
-    font-family:Titillium Web;
+    font-family: "Roboto script=latin rev=1";
 }
 
 /*-----Desktop-----*/
 
+main {
+    height: 100%;
+}
+
 Main #Desktop{
-    position: fixed;
+
 }
 
 #Desktop ul {
@@ -123,128 +126,28 @@ Main #Desktop{
         box-shadow: 0 0 2px 0 rgba(49, 49, 49, 0.85)
     }
 
-/*-----Blogger Cards-----*/
-    #Desktop #Blogger-Cards{
-        top: 0;
-        right: 0;
-        height: 95.5%;
-    }
-
-    #Desktop #Blogger-Card{
-        margin: 45px 0 auto;
-    }
-
-    #Desktop #Blogger-Card .Head-PNG{
-        width: 100%;
-        height: 125px;
-    }
-
-    #Desktop #Blogger-Card .Head-PNG img{
-        width: 85px;
-        border-radius: 50%;
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: 22px auto;
-        box-shadow: 0 0 0 1px rgba(216, 219, 220, 0.5), 0 1px 2px #c9c9ca;
-        user-select: none;
-        -webkit-user-select: none;
-    }
-
-    #Desktop #Blogger-Card .Head-Info{
-        width: 100%;
-        text-align: center;
-    }
-
-    #Desktop #Blogger-Card .Head-Info #Blogger-Des{
-        color: #b3b5b9;
-        font-size: 14px;
-        user-select: none;
-        -webkit-user-select: none;
-    }
-
-    #Desktop #Blogger-Card .Head-Info #Blogger-Name{
-        color: #fff;
-        font-size: 20px;
-        line-height: 32px;
-        user-select: none;
-        -webkit-user-select: none;
-    }
-
-    #Desktop #Blogger-Card .Tags-Box{
-        width: 230px;
-        margin: 5px 0 auto 20px;
-        -ms-flex-pack: center;
-        -webkit-box-pack: center;
-        justify-content: center;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-    }
-
-    #Desktop #Blogger-Card .Tags-Box #Tags{
-        background-color: rgba(22, 23, 25, 0.3);
-        align-items: center;
-        border-radius: 4px;
-        display: -webkit-box;
-        padding: 3px 14px 4px;
-        width: max-content;
-        float: left;
-        margin-right: 4px;
-        margin-left: 4px;
-    }
-
-    #Desktop #Blogger-Card .Tags-Box i{
-        color: #b9bbbe;
-        font-size: 14px;
-    }
-
-    #Desktop #Blogger-Card .Tags-Box a{
-        color: #b9bbbe;
-        font-size: 14px;
-        user-select: none;
-        -webkit-user-select: none;
-    }
-
-    #Desktop #Blogger-Card .Contact-Me{
-        width: 270px;
-    }
-
-    #Desktop #Blogger-Card .Contact-Me #Split-Main{
-        width: 230px;
-        margin: 12px 0 auto 20px;
-    }
-
-    #Desktop #Blogger-Card .Contact-Me .Split{
-        border-bottom: 1px solid rgba(255, 255, 255, 0.26);
-    }
-
-    #Desktop #Blogger-Card .Contact-Me #Split-Main span{
-        top: 45px;
-        left: 100px;
-        width: 870px;
-        height: 87%;
-        border-radius: 0px;
-    }
-/*-----Blogger Cards-----*/
-
-/*-----Article Cards-----*/
-
-
-
-/*-----Article Cards-----*/
-
 /*-----Desktop Small Parts-----*/
+
+/*-----Desktop-----*/
+
+/*-----Desktop-----*/
+
+#Main{
+    height: 100%;
+    padding-bottom: 44px;
+}
 
 /*-----Desktop-----*/
 
 /*-----Taskbar-----*/
 
 #Taskbar-footer{
-    bottom: 0px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
     height: 44px;
-    position: fixed;
     background-color: #0B0B0B;
 }
 
@@ -252,10 +155,11 @@ Main #Desktop{
     width: 48px;
 }
 
-#Taskbar-footer .Start img{
+#Taskbar-footer .Start i {
     width: 16px;
     height: 16px;
     color: #fff;
+    font-size: 18px;
     position: fixed;
     left: 2px;
     margin: 13px;
@@ -311,12 +215,10 @@ Main #Desktop{
     position: fixed;
 }
 
-#Taskbar-footer .I img{
-    width: 30px;
-    border-radius: 3px;
-    margin: 6px auto;
-    user-select: none;
-    -webkit-user-select: none;
+#Taskbar-footer .I i{
+    color: #fff;
+    font-size: 20px;
+    margin: 12px auto;
 }
 
 #Taskbar-footer .Time{
