@@ -68,3 +68,5 @@ function setPostViews($postID) {
         update_post_meta($postID, $count_key, $count);
     }
 }
+
+//分页

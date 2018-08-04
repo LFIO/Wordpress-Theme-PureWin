@@ -49,5 +49,5 @@
         ?>
     </style>
 </head>
-<body  onmousemove="move(event)" onmouseup="up()" onmousedown="Mi(event)">
+<body>
 

@@ -43,7 +43,7 @@ get_header();
             </ul>
             <!--Shortcut Mode-->
             <!--Blogger Card-->
-            <div class="Cards" id="Blogger-Cards">
+            <div class="Cards" id="Blogger-Cards" style="display:  none;">
                 <div id="Blogger-Card">
                     <div class="Head-PNG">
                         <img src="<?php if (get_option('PureWin-BloggerHead') == ""){echo "https://p.lfio.net/i/?i=30751423";}else{echo get_option('PureWin-BloggerHead');}?>">
@@ -69,46 +69,7 @@ get_header();
                     </div>
                 </div>
 
-                <div id="Article-Main">
-                    <div class="Article-Main">
-                        <ul>
-                        <?php if ( have_posts() ) { ?>
-                            <?php while ( have_posts() ) { the_post(); global $post; ?>
-                                <?php if( $post->post_type== 'post' ) { ?>
-                            <li>
-                                <div id="Article-Box">
-                                    <div class="Article-info">
-                                        <div id="Art-Info">
-                                            <span><i class="fa fa-clock"></i>&nbsp;<?php echo human_time_diff(get_the_time('U'), current_time('timestamp')) . '前'; ?></span>&nbsp;-&nbsp;
-                                            <span><i class="fa fa-eye"></i>&nbsp;<?php echo getPostViews(get_the_ID()); ?></span>&nbsp;-&nbsp;
-                                            <span><i class="fa fa-comment-alt"></i>&nbsp;<?php comments_popup_link('0', '1', '%', '', '评论已关闭'); ?></span>&nbsp;-&nbsp;
-                                            <span><i class="fa fa-tag"></i>&nbsp;<?php the_tags('', ', ', ''); ?></span>&nbsp;-&nbsp;
-                                            <span><i class="fa fa-clone"></i>&nbsp;<?php the_category( ', ' ); ?></span>&nbsp;&nbsp;/&nbsp;&nbsp;
-                                            <span><?php bloginfo('name'); ?></span>
-                                        </div>
-                                        <div id="Article-Name">
-                                            <h3><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
-                                        </div>
-                                        <div id="Article-FFF"></div>
-                                        <div id="Article-Content">
-                                            <?php if ( has_post_thumbnail() ) {the_post_thumbnail();}the_excerpt(); ?>
-                                        </div>
-                                    </div>
-                                    <div class="Article-Footer">
-                                        <span><a href="<?php the_permalink(); ?>"><i class="fa fa-caret-down"></i> 阅读全文</a></span>
-                                        <div id="Article-Author">
-                                            <h3><?php echo the_author_posts_link(); ?></h3>
-                                            <?php echo get_avatar( get_the_author_meta( 'ID' ) ); ?>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        <?php } ?>
-                            <?php } ?>
-                                <?php } ?>
-                        </ul>
-                    </div>
-                </div>
+                <!--Old-->
 
             </div>
             <!--Blogger Card-->
@@ -127,7 +88,7 @@ get_header();
                 <a target="_blank" href="/wp-admin"><i class="far fa-window-restore"></i></a>
             </div>
             <div class="I">
-                <img src="https://p.lfio.net/i/?i=30751423">
+                <img src="https://cdn.p.lfio.net/?i=30751423">
             </div>
             <div class="Time">
                 <span id='i-Time'></span>

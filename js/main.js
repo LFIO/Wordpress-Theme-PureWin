@@ -16,7 +16,7 @@
 window.onload=function(){
     refreshTime();
     console.clear();
-    console.log("\n %c LF112 %c https://LF112.NET %c 页面加载完毕消耗了%c " + Math.round(100 * performance.now()) / 100 + "ms \n\n", "color: #ffffff; background: #f0dda3; padding:5px 0;", "background: #f1f1e1; padding:5px 0;", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;", "color: #eedda3; background: rgba(49, 49, 49, 0.85); padding:5px 0;")
+    console.log("\n %c LF112 %c https://LF112.NET %c 页面加载完毕消耗了%c " + Math.round(100 * performance.now()) / 100 + "ms \n\n", "color: #ffffff; background: rgb(0, 145, 228); padding:5px 0;", "background:rgba(197, 197, 197, 0.89); padding:5px 0;", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;", "color: rgb(0, 145, 228); background: rgba(49, 49, 49, 0.85); padding:5px 0;")
 }
 function checkTime(i){
     if(i<10){
@@ -39,44 +39,70 @@ function refreshTime(){
 }
 //状态栏时间
 
-
-var Mil = false;
-var NewDiv = document.createElement('div');
-
-function getMousePos(event) {
-    var e = event || window.event;
-    var scrollX = document.documentElement.scrollLeft || document.body.scrollLeft;
-    var scrollY = document.documentElement.scrollTop || document.body.scrollTop;
-    var x = e.pageX || e.clientX + scrollX;
-    var y = e.pageY || e.clientY + scrollY;
-    return { 'x': x, 'y': y };
-}
-function  Mi(e) {
-    document.body.appendChild(NewDiv);
-    NewDiv.id = 'Move_div';
-    move_div = document.getElementById("Move_div");
-    var m_down_x = getMousePos(e).x;
-    var m_down_y= getMousePos(e).y;
-    move_div.style.left = m_down_x + "px";
-    move_div.style.top = m_down_y + "px";
-    move_div.style.width = m_down_x - parseInt(move_div.style.left) +"px";
-    move_div.style.height = m_down_y - parseInt(move_div.style.top) +"px";
-    Mil = true;
-
-}
-function move(e){
-    if(Mil){
-        move_div = document.getElementById("Move_div");
-        var m_move_x = getMousePos(e).x;
-        var m_move_y= getMousePos(e).y;
-        move_div.style.width = m_move_x - parseInt(move_div.style.left) +"px";
-        move_div.style.height = m_move_y - parseInt(move_div.style.top) +"px";
+(function($){
+    $.fn.areaSelect=function(option){
+        var opt={}
+        opt=$.extend(opt,option);
+        var _this=$(this);
+        _this.on('mousedown',function (e) {
+            _this.find('li').removeClass('selected');
+            var startTop=e.pageY;
+            var startLeft=e.pageX;
+            var endTop,endLeft;
+            var selectBox=$('<div id="select-box"></div>');
+            $('body').append(selectBox);
+            selectBox.css({'position':'fixed', 'top':startTop+'px', 'left':startLeft+'px', 'background':'rgba(162, 204, 242, 0.35)', 'transition':'all 0s', 'width':0, 'height':0, 'z-index':10,'box-shadow':'0 0px 0.1px 0 rgba(255, 255, 255, 0.88)'})
+            $(document).on('mousemove',function (e) {
+                e.preventDefault();
+                endTop=e.pageY;
+                endLeft=e.pageX;
+                if(e.pageY-startTop>0 && e.pageX-startLeft>0){
+                    var height=e.pageY-startTop;
+                    var width=e.pageX-startLeft;
+                    selectBox.css({
+                        'width':width+'px',
+                        'height':height+'px'
+                    })
+                }else if(e.pageY-startTop<0 && e.pageX-startLeft<0) {
+                    var height=-(e.pageY-startTop);
+                    var width=-(e.pageX-startLeft);
+                    selectBox.css({
+                        'width':width+'px',
+                        'height':height+'px',
+                        'top':e.pageY+'px',
+                        'left':e.pageX+'px'
+                    })
+                }else if(e.pageY-startTop>0 && e.pageX-startLeft<0) {
+                    var height=(e.pageY-startTop);
+                    var width=-(e.pageX-startLeft);
+                    selectBox.css({
+                        'width':width+'px',
+                        'height':height+'px',
+                        'top':startTop+'px',
+                        'left':e.pageX+'px'
+                    })
+                }else if(e.pageY-startTop<0 && e.pageX-startLeft>0) {
+                    var height=-(e.pageY-startTop);
+                    var width=(e.pageX-startLeft);
+                    selectBox.css({
+                        'width':width+'px',
+                        'height':height+'px',
+                        'top':e.pageY+'px',
+                        'left':startLeft+'px'
+                    })
+                }
+            })
+            $(document).on('mouseup',function () {
+                $('#select-box').remove();
+                $(document).unbind('mousemove');
+            })
+        })
     }
-}
-function up(){
-    Mil = false;
-    document.body.removeChild(document.getElementById("Move_div"));
-}
+})(jQuery)
+
+$(function () {
+    $('body').areaSelect()
+})
 //模仿Win10桌面拖拉框
 
 $("#SSR").hover(function(){},function(){
