@@ -7,12 +7,12 @@
  * Theme Name: PureWin
  * Theme URI: https://lf112.net
  * Description: Theme PureWin by LF112
- * Version: 0.0.3
+ * Version: 0.0.4
  * Author: LF112
  * Author URI: https://lf112.net
  * Tags: PureWin,Windows10,LF112,Wordpress,Metro
  */
-@import url("https://use.fontawesome.com/releases/v5.1.0/css/all.css");
+@import url("//at.alicdn.com/t/font_778177_m1svdxjoejb.css");
 
 html, body, * {
     margin: 0;
@@ -130,14 +130,232 @@ Main #Desktop{
 
 /*-----Desktop-----*/
 
-/*-----Desktop-----*/
-
 #Main{
     height: 100%;
     padding-bottom: 44px;
 }
 
 /*-----Desktop-----*/
+
+/*-----Article-Card-----*/
+
+#Main .Article-Card{
+    background-image: url(/wp-content/themes/PureWin/images/WinEmail.jpg);
+    height: 100%;
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+    padding-bottom: 44px;
+    display: flex;
+    overflow: hidden;
+}
+
+#Main .Article-Card #AC-Menu{
+    width: 258px;
+    display: flex;
+    flex-direction: column;
+}
+
+#Main .Article-Card #AC-Menu article{
+    z-index: 0;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+#Main .Article-Card #AC-Menu article:before {
+    content: "";
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    left: -100%;
+    top: -100%;
+    background: url(/wp-content/themes/PureWin/images/WinEmail.jpg) no-repeat center center fixed;
+    filter: blur(5px);
+    z-index: -2;
+}
+
+#Main .Article-Card #AC-Menu article .AC-Menu_BackGroup{
+    background: linear-gradient(180.55deg,rgb(29, 114, 184) 242px,rgba(0, 103, 187, 0.38) 100%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#Main .Article-Card #AC-Menu article .AC-Menu_Main{
+
+}
+
+#Main .Article-Card #AC-Menu article .AC-Menu_Main #AC-MM_Title{
+    height: 21px;
+    margin: 5px 0 auto 12px;
+    color: #fff;
+}
+
+#Main .Article-Card #AC-Menu article .AC-Menu_Main #AC-MM_Title a{
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+#Main .Article-Card #AC-Menu article .AC-Menu_Main #AC-MM_Folding{
+    width: 46px;
+    height: 46px;
+    text-align: center;
+    padding: 11px;
+    margin: 6px 0 auto 1px;
+}
+
+#Main .Article-Card #AC-Menu article .AC-Menu_Main #AC-MM_Folding:hover {
+
+    box-shadow: 0 0 0 1px rgb(106, 162, 207), 0 1px 2px rgb(106, 162, 207);
+    background: rgb(54, 129, 191);
+
+}
+
+#Main .Article-Card #AC-Menu article .AC-Menu_Main #AC-MM_Folding a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    margin: auto 0;
+}
+
+#Main .Article-Card #AC-Menu article .AC-Menu_Main #AC-MM_Main {
+    width: 100%;
+    margin: 1px 0 auto;
+}
+
+#Main .Article-Card #AC-Menu article .AC-Menu_Main #AC-MM_Main ul li:hover{
+
+    /*box-shadow: 0 0 0 1px rgb(106, 162, 207), 0 1px 2px rgb(106, 162, 207);*/
+    background: rgb(54, 129, 191);
+
+}
+
+#Main .Article-Card #AC-Menu article .AC-Menu_Main #AC-MM_Main ul {
+
+}
+
+#Main .Article-Card #AC-Menu article .AC-Menu_Main #AC-MM_Main ul li {
+
+}
+
+#Main .Article-Card #AC-Menu article .AC-Menu_Main #AC-MM_Main ul li .AC-MM_M-Single{
+    width: 100%;
+    height: 48px;
+    display: flex;
+}
+
+#Main .Article-Card #AC-Menu article .AC-Menu_Main #AC-MM_Main ul li .AC-MM_M-Spacing{
+    margin-bottom: 12px;
+}
+
+#Main .Article-Card #AC-Menu article .AC-Menu_Main #AC-MM_Main ul li .AC-MM_M-Single .AC-MM_M-Single_i{
+    height: 100%;
+    width: 62px;
+    color: #fff;
+    text-align: center;
+    padding-top: 16px;
+}
+
+#Main .Article-Card #AC-Menu article .AC-Menu_Main #AC-MM_Main ul li .AC-MM_M-Single .AC-MM_M-Single_i i{
+    font-size: 18px;
+}
+
+#Main .Article-Card #AC-Menu article .AC-Menu_Main #AC-MM_Main ul li .AC-MM_M-Single .AC-MM_M-Single_Title{
+    width: 100%;
+    padding-top: 13px;
+    color: #fff;
+}
+
+#Main .Article-Card #AC-Menu article .AC-Menu_Main #AC-MM_Main ul li .AC-MM_M-Single .AC-MM_M-Single_Title h2{
+    font-size: 18px;
+}
+
+#Main .Article-Card #AC-Menu article .AC-Menu_Main #AC-MM_Main ul li .AC-MM_M-Selectivity {
+    width: 100%;
+    height: 60px;
+    margin: 1px 0 1px 0;
+    display: flex;
+}
+
+#Main .Article-Card #AC-Menu article .AC-Menu_Main #AC-MM_Main ul li .AC-MM_M-Selectivity .AC-MM_M-Selectivity_i{
+    height: 100%;
+    width: 62px;
+    color: #fff;
+}
+
+#Main .Article-Card #AC-Menu article .AC-Menu_Main #AC-MM_Main ul li .AC-MM_M-Selectivity .AC-MM_M-Selectivity_is {
+    width: 4px;
+    height: 100%;
+    background: #fff;
+}
+
+#Main .Article-Card #AC-Menu article .AC-Menu_Main #AC-MM_Main ul li .AC-MM_M-Selectivity .AC-MM_M-Selectivity_Text {
+    width: 100%;
+    padding-top: 9px;
+    color: #fff;
+}
+
+#Main .Article-Card #AC-Menu article .AC-Menu_Main #AC-MM_Main ul li .AC-MM_M-Selectivity .AC-MM_M-Selectivity_Text span{
+    font-weight: lighter!important;
+}
+
+#Main .Article-Card #AC-Menu article .AC-Menu_Main #AC-MM_Main ul li .AC-MM_M-Selectivity .AC-MM_M-Selectivity_Text p {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/*----------------------*/
+
+#Main .Article-Card #AC-Menu article .AC-Menu_Footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 48px;
+    display: flex;
+}
+
+#Main .Article-Card #AC-Menu article .AC-Menu_Footer .AC-MF_Button{
+    height: 100%;
+    width: 48px;
+    text-align: center;
+    padding: 12px;
+}
+
+#Main .Article-Card #AC-Menu article .AC-Menu_Footer .AC-MF_is{
+    background: rgba(29, 114, 184, 0.44);
+}
+
+#Main .Article-Card #AC-Menu article .AC-Menu_Footer .AC-MF_Button:hover{
+    box-shadow: 0 0 0 1px rgb(106, 162, 207), 0 1px 2px rgb(106, 162, 207);
+}
+
+#Main .Article-Card #AC-Menu article .AC-Menu_Footer .AC-MF_Button a{
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    margin: auto 0;
+}
+
+/*----------------------*/
+
+#Main .Article-Card #AC-Article_list{
+    background: rgb(255, 255, 255);
+    width: 388px;
+    display: flex;
+    flex-direction: column;
+}
+
+/*----------------------*/
+
+#Main .Article-Card #AC-Article_Main{
+    flex: 1;
+}
+
+/*-----Article-Card-----*/
 
 /*-----Taskbar-----*/
 
@@ -170,6 +388,7 @@ Main #Desktop{
 #Taskbar-footer .Search{
     width: 344px;
     height: 100%;
+    padding: 5px 0 0 0;
     left: 48px;
     position: fixed;
     background-color: #333333;
@@ -184,6 +403,7 @@ Main #Desktop{
 
 #Taskbar-footer .Search #left{
     position: fixed;
+    margin: 10px;
     user-select: none;
     -webkit-user-select: none;
 }
@@ -205,20 +425,28 @@ Main #Desktop{
     position: fixed;
 }
 
+#Taskbar-footer .Menu a{
+    height: 44px;
+    padding-top: 14px;
+    text-decoration: none;
+    position: absolute;
+}
+
 #Taskbar-footer .Menu i{
     color: #fff;
+    font-size: 18px;
     margin: 13px 13px 13px 16px;
 }
 
 #Taskbar-footer .I {
     right: 17px;
     position: fixed;
+    margin: 12px auto;
 }
 
 #Taskbar-footer .I i{
     color: #fff;
     font-size: 20px;
-    margin: 12px auto;
 }
 
 #Taskbar-footer .Time{
@@ -226,7 +454,7 @@ Main #Desktop{
     text-align: center;
     position: fixed;
     font-size: 12px;
-    margin: 3px auto;
+    margin: 6px auto;
     user-select: none;
     -webkit-user-select: none;
 }
