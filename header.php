@@ -10,7 +10,7 @@
 
  Html Name: PureWin
  Description：Html Code by LF112
- Version：0.0.3
+ Version：0.0.6
  Author：LF112
  Author URI：https://lf112.net
  Author QQ: 2275203821

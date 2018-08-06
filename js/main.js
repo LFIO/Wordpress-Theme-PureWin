@@ -7,7 +7,7 @@
 
 //Html Name: PureWin
 //Description：Html Code by LF112
-//Version：0.1.0
+//Version：0.0.6
 //Author：LF112
 //Author URI：https://lf112.net
 //Author QQ: 2275203821
@@ -102,5 +102,7 @@ function refreshTime(){
 
 $(function () {
     $('body').areaSelect()
+
+    $("#Main .Article-Card #AC-Article_list .AC-AL_Main .AC-AL_M-Main").height($("#AC-Article_list").parent().height()-113);
 })
 //模仿Win10桌面拖拉框

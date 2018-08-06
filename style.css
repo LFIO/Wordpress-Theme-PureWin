@@ -7,12 +7,13 @@
  * Theme Name: PureWin
  * Theme URI: https://lf112.net
  * Description: Theme PureWin by LF112
- * Version: 0.0.4
+ * Version: 0.0.6
  * Author: LF112
  * Author URI: https://lf112.net
  * Tags: PureWin,Windows10,LF112,Wordpress,Metro
  */
-@import url("//at.alicdn.com/t/font_778177_m1svdxjoejb.css");
+@import url("https://at.alicdn.com/t/font_778177_2e5e195hxmu.css");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500");
 
 html, body, * {
     margin: 0;
@@ -291,6 +292,7 @@ Main #Desktop{
     width: 4px;
     height: 100%;
     background: #fff;
+    margin: 0 0 0 2px;
 }
 
 #Main .Article-Card #AC-Menu article .AC-Menu_Main #AC-MM_Main ul li .AC-MM_M-Selectivity .AC-MM_M-Selectivity_Text {
@@ -345,9 +347,181 @@ Main #Desktop{
 #Main .Article-Card #AC-Article_list{
     background: rgb(255, 255, 255);
     width: 388px;
-    display: flex;
     flex-direction: column;
 }
+
+#Main .Article-Card #AC-Article_list .AC-AL_Title{
+    height: 21px;
+    margin: 5px 0 auto 12px;
+    color: #fff;
+}
+
+#Main .Article-Card #AC-Article_list .AC-AL_Header{
+    width: 100%;
+    height: 45px;
+    display: flex;
+}
+
+#Main .Article-Card #AC-Article_list .AC-AL_Header .AC-AL_H-Search{
+    width: 260px;
+    height: 43px;
+    margin: 0 0 auto 23px;
+    position: relative;
+}
+
+#Main .Article-Card #AC-Article_list .AC-AL_Header .AC-AL_H-Search input{
+    border: 1px solid #D2D2D2;
+    box-shadow: none;
+    background: rgba(225, 225, 225, 0);
+    width: 260px;
+    height: 43px;
+    font-size: 15px;
+    padding: 0 11px;
+}
+
+#Main .Article-Card #AC-Article_list .AC-AL_Header .AC-AL_H-Search i{
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    font-size: 19px;
+    padding: 10px;
+}
+
+#Main .Article-Card #AC-Article_list .AC-AL_Header .AC-AL_H-Search i:hover {
+    background: rgb(243, 243, 243);
+}
+
+#Main .Article-Card #AC-Article_list .AC-AL_Header a{
+    width: 45px;
+    height: 45px;
+    color: #3c3c3c;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#Main .Article-Card #AC-Article_list .AC-AL_Header a:hover{
+    background: rgb(243, 243, 243);
+}
+
+#Main .Article-Card #AC-Article_list .AC-AL_Header a i{
+    font-size: 19px;
+}
+
+/*----------------------*/
+
+#Main .Article-Card #AC-Article_list .AC-AL_Main{
+    width: 100%;
+    margin: 2px 0 2px;
+}
+
+#Main .Article-Card #AC-Article_list .AC-AL_Main .AC-AL_M-Top{
+    width: 100%;
+    height: 40px;
+    display: flex;
+}
+
+#Main .Article-Card #AC-Article_list .AC-AL_Main .AC-AL_M-Top h2{
+    font-size: 18px;
+    margin: 8px 0 auto 23px;
+}
+
+/*----------------------*/
+
+#Main .Article-Card #AC-Article_list .AC-AL_Main .AC-AL_M-Main{
+
+}
+
+#Main .Article-Card #AC-Article_list .AC-AL_Main .AC-AL_M-Main ul {
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+}
+
+#Main .Article-Card #AC-Article_list .AC-AL_Main .AC-AL_M-Main ul::-webkit-scrollbar {
+    width: 2px;
+}
+#Main .Article-Card #AC-Article_list .AC-AL_Main .AC-AL_M-Main ul::-webkit-scrollbar-thumb {
+    background-color: rgb(122, 122, 122);
+}
+#Main .Article-Card #AC-Article_list .AC-AL_Main .AC-AL_M-Main ul::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+#Main .Article-Card #AC-Article_list .AC-AL_Main .AC-AL_M-Main ul li:hover {
+    background: rgb(243, 243, 243);
+}
+
+#Main .Article-Card #AC-Article_list .AC-AL_Main .AC-AL_M-Main ul li .AC-AL_M-M_Head{
+    width: 100%;
+    height: 40px;
+    background: rgb(249, 249, 249);
+    border-top: 1px solid rgb(230, 230, 230);
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+#Main .Article-Card #AC-Article_list .AC-AL_Main .AC-AL_M-Main ul li .AC-AL_M-M_Head p{
+    font-size: 15px;
+    font-weight: lighter!important;
+    margin: 9px 0 auto 25px;
+}
+
+#Main .Article-Card #AC-Article_list .AC-AL_Main .AC-AL_M-Main ul li .AC-AL_M-M_Main{
+    width: 100%;
+    height: 85px;
+    display: flex;
+    border-bottom: 1px solid rgb(230, 230, 230)
+}
+
+#Main .Article-Card #AC-Article_list .AC-AL_Main .AC-AL_M-Main ul li .AC-AL_M-M_Main .AC-AL_M-M_M-Header {
+    width: 65px;
+    height: 100%;
+    text-align: center;
+}
+
+#Main .Article-Card #AC-Article_list .AC-AL_Main .AC-AL_M-Main ul li .AC-AL_M-M_Main .AC-AL_M-M_M-Header img{
+    width: 33px;
+    height: 33px;
+    margin: 15px 0 auto 13px;
+    border-radius: 50%;
+}
+
+#Main .Article-Card #AC-Article_list .AC-AL_Main .AC-AL_M-Main ul li .AC-AL_M-M_Main .AC-AL_M-M_M-Text{
+    width: 238px;
+    height: 100%;
+}
+
+#Main .Article-Card #AC-Article_list .AC-AL_Main .AC-AL_M-Main ul li .AC-AL_M-M_Main .AC-AL_M-M_M-Text p{
+    overflow: hidden;
+    white-space: nowrap;
+    color: rgb(115, 115, 115);
+}
+
+#Main .Article-Card #AC-Article_list .AC-AL_Main .AC-AL_M-Main ul li .AC-AL_M-M_Main .AC-AL_M-M_M-Text #AC-AL_M-M_M-T_Name{
+    margin: 10px 0 auto;
+    overflow:hidden;
+}
+
+#Main .Article-Card #AC-Article_list .AC-AL_Main .AC-AL_M-Main ul li .AC-AL_M-M_Main .AC-AL_M-M_M-Text #AC-AL_M-M_M-T_Name a{
+    text-decoration: none;
+    color: #000;
+}
+
+#Main .Article-Card #AC-Article_list .AC-AL_Main .AC-AL_M-Main ul li .AC-AL_M-M_Main .AC-AL_M-M_M-Text #AC-AL_M-M_M-T_Title{
+
+}
+
+#Main .Article-Card #AC-Article_list .AC-AL_Main .AC-AL_M-Main ul li .AC-AL_M-M_Main .AC-AL_M-M_footer{
+    width: 85px;
+    height: 100%;
+    text-align: center;
+}
+
+#Main .Article-Card #AC-Article_list .AC-AL_Main .AC-AL_M-Main ul li .AC-AL_M-M_Main .AC-AL_M-M_footer p{
+    margin: 30px 0 auto;
+    color: rgb(115, 115, 115);
+}
+
 
 /*----------------------*/
 

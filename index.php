@@ -94,7 +94,51 @@ get_header();
                     </article>
                 </div>
                 <div id="AC-Article_list">
+                    <div class="AC-AL_Title"></div>
+                    <div class="AC-AL_Header">
+                        <div class="AC-AL_H-Search">
+                            <i class="iconfont icon-iconsousuo"></i>
+                            <input type="text" placeholder="搜索" value="">
+                        </div>
+                        <a href="javascript:;"><i class="iconfont icon-shuaxin"></i></a>
+                        <a href="javascript:;"><i class="iconfont icon-shi"></i></a>
+                    </div>
+                    <div class="AC-AL_Main">
+                        <div class="AC-AL_M-Top">
+                            <h2>文章</h2>
 
+                        </div>
+                        <div class="AC-AL_M-Main">
+                            <ul>
+                                <li>
+                                    <div class="AC-AL_M-M_Head"><p>所有文章</p></div>
+                                </li>
+<?php if ( have_posts() ) { ?>
+    <?php while ( have_posts() ) { the_post(); global $post; ?>
+        <?php if( $post->post_type== 'post' ) { ?>
+                                <li>
+                                    <a href="<?php the_permalink(); ?>" style="text-decoration: none;">
+                                        <div class="AC-AL_M-M_Main">
+                                            <div class="AC-AL_M-M_M-Header">
+                                                <?php echo get_avatar( get_the_author_meta( 'ID' ) ); ?>
+                                            </div>
+                                            <div class="AC-AL_M-M_M-Text">
+                                                <p id="AC-AL_M-M_M-T_Name"><?php echo the_author_posts_link(); ?></p>
+                                                <span id="AC-AL_M-M_M-T_Title"><?php the_title(); ?></span>
+                                                <?php if ( has_post_thumbnail() ) {the_post_thumbnail();}the_excerpt(); ?>
+                                            </div>
+                                            <div class="AC-AL_M-M_footer">
+                                                <p><?php echo human_time_diff(get_the_time('U'), current_time('timestamp')) . '前'; ?></p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+        <?php } ?>
+    <?php } ?>
+<?php } ?>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div id="AC-Article_Main">
 

@@ -15,7 +15,7 @@
 
 ?>
 
-<script type='text/javascript' src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
 <script type='text/javascript' src="<?php bloginfo('template_url'); ?>/js/main.js?ver=<?php echo wp_get_theme()->get('Version');?>"></script>
 
 </body>
